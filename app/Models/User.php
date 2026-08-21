@@ -70,6 +70,9 @@ class User extends Authenticatable implements PasskeyUser
             : $initials;
     }
 
+    /**
+     * @return HasMany<Task, $this>
+     */
     public function tasks(): HasMany
     {
         return $this->hasMany(Task::class);
