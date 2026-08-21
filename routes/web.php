@@ -11,4 +11,10 @@ Route::prefix('{current_team}')
         Route::view('dashboard', 'dashboard')->name('dashboard');
     });
 
-require __DIR__.'/settings.php';
+Route::middleware(['auth', 'verified'])
+    ->group(function () {
+        Route::livewire('/tasks', 'pages::tasks')->name('tasks');
+        Route::livewire('/billing', 'pages::billing')->name('billing');
+    });
+
+require __DIR__ . '/settings.php';
