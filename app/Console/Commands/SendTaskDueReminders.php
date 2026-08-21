@@ -19,7 +19,7 @@ class SendTaskDueReminders extends Command
             ->where('completed', false)
             ->with('user')
             ->get()
-            ->filter(fn(Task $task) => $task->user->subscribed('default'));
+            ->filter(fn (Task $task) => $task->user->subscribed('default'));
 
         foreach ($tasks as $task) {
             Mail::to($task->user->email)->queue(new TaskDueReminder($task));

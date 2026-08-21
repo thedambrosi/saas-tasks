@@ -19,7 +19,7 @@ class TaskDueReminder extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Lembrete: "' . $this->task->title . '" vence em breve',
+            subject: 'Lembrete: "'.$this->task->title.'" vence em breve',
         );
     }
 

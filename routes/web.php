@@ -17,4 +17,4 @@ Route::middleware(['auth', 'verified'])
         Route::livewire('/billing', 'pages::billing')->name('billing');
     });
 
-require __DIR__ . '/settings.php';
+require __DIR__.'/settings.php';
