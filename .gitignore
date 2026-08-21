@@ -7,7 +7,6 @@
 /storage/*.key
 /storage/pail
 /vendor
-/.claude
 .env
 .mcp.json
 .env.backup
@@ -26,3 +25,5 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+/.claude
+
